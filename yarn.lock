@@ -5479,6 +5479,11 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
+react-native-boundary@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-boundary/-/react-native-boundary-1.1.1.tgz#08259512634a1a6685f5ef3699a2ca4d39f3ddbc"
+  integrity sha512-CkWlrk5o2IHEanZERZ6v4PscFPm8mDtEy2sUbMBHCo0671c3Nb6UU2I6dXWtQ7IpWOB4ZUlod/KHHrKGfhckCQ==
+
 react-native-push-notification@^3.1.9:
   version "3.1.9"
   resolved "https://registry.yarnpkg.com/react-native-push-notification/-/react-native-push-notification-3.1.9.tgz#760ee06e743fef74fc9fcb672dac40794fdc4c47"

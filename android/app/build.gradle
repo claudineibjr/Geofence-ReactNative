@@ -187,6 +187,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-fused-location')
     implementation project(':react-native-boundary')
     implementation project(':react-native-push-notification')
     implementation fileTree(dir: "libs", include: ["*.jar"])

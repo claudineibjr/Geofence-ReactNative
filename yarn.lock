@@ -2994,6 +2994,11 @@ gensync@^1.0.0-beta.1:
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.1.tgz#58f4361ff987e5ff6e1e7a210827aa371eaac269"
   integrity sha512-r8EC6NO1sngH/zdD9fiRDLdcgnbayXah+mLgManTaIZJqEC1MZstmnox8KpnI2/fxQwrp5OpCOYWLp4rBl4Jcg==
 
+geolib@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/geolib/-/geolib-3.2.1.tgz#1d7c6e7106eddc10445ba2038550aab63d6e4fa4"
+  integrity sha512-O9nD8iSD4VimupKak8bKySLkkWI5VWetxIXsU7jmJRXxBFRR9LxSXGfTomtcHJLSRiznx+YHXHTOIVq4qgQmPw==
+
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
@@ -5483,6 +5488,11 @@ react-native-boundary@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-boundary/-/react-native-boundary-1.1.1.tgz#08259512634a1a6685f5ef3699a2ca4d39f3ddbc"
   integrity sha512-CkWlrk5o2IHEanZERZ6v4PscFPm8mDtEy2sUbMBHCo0671c3Nb6UU2I6dXWtQ7IpWOB4ZUlod/KHHrKGfhckCQ==
+
+react-native-fused-location@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-fused-location/-/react-native-fused-location-1.1.1.tgz#2b199fce52b90ac8d54bb6f3726223b17a88a771"
+  integrity sha512-zPML4EbHBGD2JVGjPixpiADrqsqnGIUxcUbR57qtUSCgWXNebMFdzXWDoupmv3AUequycCHDqW8QEbL6NRTYiw==
 
 react-native-push-notification@^3.1.9:
   version "3.1.9"

@@ -2,16 +2,13 @@
 import React, { Component } from 'react';
 
 // ReactNative
-import {Text, Alert, AppState, AppStateStatus} from 'react-native';
+import {Text} from 'react-native';
 
 // Geofencing
 import Boundary, {Events} from 'react-native-boundary';
 
 // Services
 import PushNotifications from './Services/PushNotifications';
-
-// Enums
-
 
 // Interfaces
 interface IProps {
@@ -22,7 +19,7 @@ interface IState {
     locations: Array<{lat: number, lng: number, radius: number, id: string}>
 }
 
-class Main extends Component<IProps, IState> {
+class Main_Option1 extends Component<IProps, IState> {
     constructor(props: IProps){
         super(props);
 
@@ -31,28 +28,30 @@ class Main extends Component<IProps, IState> {
         //  -22.018349, -47.913541
         //  -21.998914, -47.899412
 
-        this.state = {
-            locations: [  
-                {   lat: -22.049176,
-                    lng: -47.915498,
-                    radius: 100, // in meters
-                    id: "Escola"},
-    
-                {   lat: -21.9927033,
-                    lng: -47.8919989,
-                    radius: 100, // in meters
-                    id: "Casa"},
-    
-                {   lat: -22.018349,
-                    lng: -47.913541,
-                    radius: 100, // in meters
-                    id: "ShoppingIguatemi"},
+        const defaultLocations = [  
+            {   lat: -22.049176,
+                lng: -47.915498,
+                radius: 100, // in meters
+                id: "Escola"},
 
-                {   lat: -21.998914,
-                    lng: -47.899412,
-                    radius: 100, // in meters
-                    id: "Kartodromo"}
-            ]
+            {   lat: -21.9927033,
+                lng: -47.8919989,
+                radius: 100, // in meters
+                id: "Casa"},
+
+            {   lat: -22.018349,
+                lng: -47.913541,
+                radius: 100, // in meters
+                id: "ShoppingIguatemi"},
+
+            {   lat: -21.998914,
+                lng: -47.899412,
+                radius: 100, // in meters
+                id: "Kartodromo"}
+        ];
+        
+        this.state = {
+            locations: defaultLocations
         };
     }
 
@@ -98,4 +97,4 @@ class Main extends Component<IProps, IState> {
     }
 }
 
-export default Main;
+export default Main_Option1;

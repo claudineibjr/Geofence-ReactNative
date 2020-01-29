@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 // ReactNative
 import {Text} from 'react-native';
 
+import Location from './Model/Location';
+import data from './data';
+
 // Geofencing
 import Boundary, {Events} from 'react-native-boundary';
 
@@ -16,7 +19,7 @@ interface IProps {
 }
 
 interface IState {
-    locations: Array<{lat: number, lng: number, radius: number, id: string}>
+    locations: Array<Location>
 }
 
 class Main_Option1 extends Component<IProps, IState> {
@@ -50,14 +53,19 @@ class Main_Option1 extends Component<IProps, IState> {
                 id: "Kartodromo"}
         ];
         
+        let locations: Array<Location>;
+        data.body.forEach(location => {
+            locations.push(new Location(Number(location.latitude), Number(location.longitude), location.id.toString()));
+        });
+
         this.state = {
-            locations: defaultLocations
+            locations: locations
         };
     }
 
     componentWillMount() {
         this.state.locations.forEach(async location => {
-            await Boundary.add(location)
+            await Boundary.add({lat: location.lat, lng: location.lng, radius: 100, id: location.id})
                 .then(info => console.log('[ADD] ' + location.id + ' has been added ' + info))
                 .catch(error => console.log('[ERROR] Failed to add ' + location.id + ' - ' + error));
         })

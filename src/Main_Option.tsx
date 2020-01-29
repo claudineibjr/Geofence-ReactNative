@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 // ReactNative
 import {Text} from 'react-native';
 
-// Geofencing
-
+import Location from './Model/Location';
+import data from './data';
 
 // Services
 import PushNotifications from './Services/PushNotifications';
@@ -16,7 +16,7 @@ interface IProps {
 }
 
 interface IState {
-    locations: Array<{lat: number, lng: number, radius: number, id: string}>
+    locations: Array<Location>
 }
 
 class Main_Option extends Component<IProps, IState> {
@@ -50,8 +50,13 @@ class Main_Option extends Component<IProps, IState> {
                 id: "Kartodromo"}
         ];
         
+        let locations: Array<Location>;
+        data.body.forEach(location => {
+            locations.push(new Location(Number(location.latitude), Number(location.longitude), location.id.toString()));
+        });
+        
         this.state = {
-            locations: defaultLocations
+            locations: locations
         };
     }
 

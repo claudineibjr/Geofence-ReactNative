@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 // ReactNative
 import {Text, PermissionsAndroid} from 'react-native';
 
+import data from './data';
+
 // Geofencing
 import FusedLocation from 'react-native-fused-location';
 import { getDistance } from 'geolib';
@@ -52,8 +54,13 @@ class Main_Option2 extends Component<IProps, IState> {
                 id: "Kartodromo"}
         ];
         
+        let locations: Array<Location>;
+        data.body.forEach(location => {
+            locations.push(new Location(Number(location.latitude), Number(location.longitude), location.id.toString()));
+        });
+
         this.state = {
-            locations: defaultLocations,
+            locations: locations,
             actualLocation: ''
         };
     }

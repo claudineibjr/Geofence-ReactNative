@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 // ReactNative
 import {Text, Alert} from 'react-native';
 
+import Location from './Model/Location';
+import data from './data';
+
 // Geofencing
 import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
 import { getDistance } from 'geolib';
@@ -17,7 +20,7 @@ interface IProps {
 }
 
 interface IState {
-    locations: Array<{lat: number, lng: number, radius: number, id: string}>,
+    locations: Array<Location>,
     actualLocation: string
 }
 
@@ -52,8 +55,13 @@ class Main_Option3 extends Component<IProps, IState> {
                 id: "Kartodromo"}
         ];
         
+        let locations: Array<Location>;
+        data.body.forEach(location => {
+            locations.push(new Location(Number(location.latitude), Number(location.longitude), location.id.toString()));
+        });
+
         this.state = {
-            locations: defaultLocations,
+            locations: locations,
             actualLocation: ''
         };
     }

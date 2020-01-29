@@ -91,10 +91,11 @@ class Main_Option2 extends Component<IProps, IState> {
                 console.log(new Date());
                 this.state.locations.forEach(location => {
                     const distance = getDistance(actualLocation, location);
-                    if (distance <= desiredDistance){
+                    console.log(location.id, distance);
+                    if (distance <= desiredDistance && this.state.actualLocation !== location.id){
                         this.setState({actualLocation: location.id});
                         PushNotifications.localNotification('Bem-vindo ao ' + location.id, 'Seja bem-vindo ao local correto. ' + location.id);
-                    } else if (this.state.actualLocation === location.id){
+                    } else if (this.state.actualLocation === location.id && distance > desiredDistance){
                         PushNotifications.localNotification('Volte sempre ao ' + location.id, 'Espero te ver novamente no ' + location.id);
                         this.setState({actualLocation: ''});
                     }

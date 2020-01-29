@@ -91,7 +91,7 @@ class Main_Option1 extends Component<IProps, IState> {
     render(){
         return(
             <>
-                <Text>Hello World!</Text>
+                <Text>Hello World! - 1</Text>
             </>
         );
     }

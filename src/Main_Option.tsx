@@ -50,7 +50,7 @@ class Main_Option extends Component<IProps, IState> {
                 id: "Kartodromo"}
         ];
         
-        let locations: Array<Location>;
+        let locations: Array<Location> = new Array<Location>();
         data.body.forEach(location => {
             locations.push(new Location(Number(location.latitude), Number(location.longitude), location.id.toString()));
         });
